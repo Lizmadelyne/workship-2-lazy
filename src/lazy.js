@@ -1,4 +1,7 @@
+let totalImages = 0;
+let loadedImages =0;
 
+//
 const isIntersecting = (entry)=>{
     return entry.isIntersecting; //true si es dentro de la pantalla o false
    
@@ -33,7 +36,7 @@ export const registerImage = (imagen)=>{
 };
 function currentlyLoad() {
     console.log(`⚪️ Total Imágenes: ${totalImages}`);
-    console.log(`🟣 Imágenes cargadas: ${loadImage}`);
+    console.log(`🟣 Imágenes cargadas: ${loadedImages}`);
     console.log("--------------------------------------");
   }
 
