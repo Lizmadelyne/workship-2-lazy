@@ -19,12 +19,21 @@ const loadImage = (entry)=>{
     //desregistrar  la imagen o unlisten esdecir no escucharla denuevo
     observer.unobserve(container);
 };
+
 const observer = new IntersectionObserver((entries)=>{
     entries.filter(isIntersecting).forEach(loadImage);
 });
 
 //
 export const registerImage = (imagen)=>{
-    observer.observe(imagen)
+    observer.observe(imagen);
+    totalImages += 1;
+    currentlyLoad()
 
 };
+function currentlyLoad() {
+    console.log(`⚪️ Total Imágenes: ${totalImages}`);
+    console.log(`🟣 Imágenes cargadas: ${loadImage}`);
+    console.log("--------------------------------------");
+  }
+
